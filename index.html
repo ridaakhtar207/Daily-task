@@ -1,0 +1,123 @@
+Here is a ready-to-use HTML page with a list of the 10 tasks and checkboxes to toggle completion. Copy-paste into an .html file and open in a browser.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Student Tasks</title>
+  <style>
+    :root {
+      --text: #111;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f8f9fa;
+      color: var(--text);
+      padding: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 0.75rem;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+
+    ul#tasks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Each task row: checkbox + label
+       Flex layout keeps checkbox aligned with text and wraps nicely */
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    input[type="checkbox"] {
+      width: 1.15em;
+      height: 1.15em;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    label {
+      line-height: 1.25;
+      cursor: pointer;
+    }
+
+    /* When checked, strike through the task text and fade color */
+    input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Daily Student Tasks</h1>
+    <ul id="tasks" aria-label="Daily tasks for students">
+      <li>
+        <input type="checkbox" id="t1" />
+        <label for="t1">Plan the day: write 3 top priorities (5 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t2" />
+        <label for="t2">Review notes from yesterday (15–20 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t3" />
+        <label for="t3">Do 1–2 practice problems or flashcards (10–15 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t4" />
+        <label for="t4">Read a short section or article (15–20 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t5" />
+        <label for="t5">Write a quick summary of what you learned today (5–10 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t6" />
+        <label for="t6">Update your to-do list and calendar (5 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t7" />
+        <label for="t7">Tidy your workspace and digital files (5 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t8" />
+        <label for="t8">Take a 5–10 minute movement break (stretch or walk)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t9" />
+        <label for="t9">Send a quick check-in or question to a classmate/professor (5–10 minutes)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="t10" />
+        <label for="t10">End-of-day reflection: note one takeaway and one improvement (5 minutes)</label>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
+
